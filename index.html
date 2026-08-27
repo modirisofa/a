@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#75d8e7" />
+    <title>پرنده‌ی بازیگوش</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">بازی آرکید</p>
+          <h1>پرنده‌ی بازیگوش</h1>
+        </div>
+        <button id="soundButton" class="icon-button" type="button" aria-label="قطع صدا">🔊</button>
+      </header>
+
+      <section class="game-card" aria-label="محیط بازی">
+        <div class="scoreboard" aria-live="polite">
+          <div><span>امتیاز</span><strong id="score">۰</strong></div>
+          <div><span>رکورد</span><strong id="bestScore">۰</strong></div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="620" aria-label="بازی عبور پرنده از لوله‌ها"></canvas>
+
+        <div id="startPanel" class="overlay">
+          <div class="bird-badge">🐤</div>
+          <h2>آماده‌ای پرواز کنی؟</h2>
+          <p>از بین لوله‌ها رد شو و رکورد تازه‌ای بساز!</p>
+          <button id="startButton" class="primary-button" type="button">شروع بازی</button>
+          <small>برای پرش، کلیک کن یا کلید فاصله را بزن</small>
+        </div>
+
+        <div id="gameOverPanel" class="overlay hidden">
+          <div class="bird-badge sad">😵</div>
+          <h2>بازی تمام شد!</h2>
+          <p>امتیاز این دور: <strong id="finalScore">۰</strong></p>
+          <button id="restartButton" class="primary-button" type="button">دوباره بازی کن</button>
+          <small>این بار می‌تونی رکوردت رو بشکنی!</small>
+        </div>
+      </section>
+
+      <footer>
+        <span><kbd>Space</kbd> پرش</span>
+        <span>یا لمس صفحه</span>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
